@@ -1,0 +1,25 @@
+
+ 
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Signup</button>
+    <button mat-menu-item>About</button>
+  </mat-menu>
+  <h1>My Sweet Project</h1>
+  <mat-form-field class="Search" appearance="fill">
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon  class="close" >close</mat-icon>
+    </button> 
+  </mat-form-field>
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button class="btn" >
+    <mat-icon class="fa">shopping_cart</mat-icon>
+    <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>input</mat-icon>
+  </button>
+</mat-toolbar>
